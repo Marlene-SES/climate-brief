@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Climate & Energy Brief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@600;800&family=Red+Hat+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: a calm morning wire briefing — few words, exact, the important thing first.
+   IDEA: a weather chart for policy: each day is a coloured cell, today's front page sits above it.
+   PICTURE: the lead story set large, with a strip of daily cells (like warming stripes) as the archive.
+   COLOUR and TYPE: navy ground in both themes, temperature-scale accents per section; Red Hat Display + Red Hat Text.
+   LAYOUT: masthead band with lead + stripe; then sections left, deadlines and search right (stacked on phones). */
+:root{color-scheme:dark;--bg:#0b1433;--bg2:#121d45;--line:#26346b;--soft:#1c2858;--ink:#eef1fb;--mute:#a9b2d6;--mast:#0f1a42;--empty:#18245a;--focus:#fff;
+--policy:#e8452c;--energy:#f7e463;--adaptation:#4fc1c6;--science:#8b98f2;--cities:#f39a3c;--funding:#9fe0c3;--heat:#ff6a3d}
+:root.light{color-scheme:light;--bg:#ffffff;--bg2:#f2f4fb;--line:#d3d9ee;--soft:#e4e8f5;--ink:#0b1433;--mute:#4a5480;--mast:#eef1fb;--empty:#e3e7f5;--focus:#0b1433;
+--policy:#c9341c;--energy:#a88400;--adaptation:#0f8489;--science:#3b4fd8;--cities:#bf6410;--funding:#1d8a5c;--heat:#d8430f}
+.mode{margin-left:auto;font:600 14px "Red Hat Text",sans-serif;min-height:44px;padding:0 14px;border-radius:22px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);cursor:pointer}
+.heat{font:600 13px "Red Hat Text";padding:2px 9px;border-radius:10px;background:var(--heat);color:#fff;white-space:nowrap}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Red Hat Text",system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}
+.band{padding:clamp(24px,4vw,56px) max(5vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+.mast{border-bottom:1px solid var(--line);background:linear-gradient(180deg,var(--mast),var(--bg))}
+.kick{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;color:var(--mute);font-size:14px}
+.kick b{font:800 17px "Red Hat Display",sans-serif;color:var(--ink)}
+h1{font:800 clamp(28px,4.2vw,46px)/1.08 "Red Hat Display",sans-serif;margin:14px 0 12px;text-wrap:balance;max-width:24ch}
+h1 a{text-decoration:none}h1 a:hover{text-decoration:underline;text-decoration-thickness:2px}
+.lead p{max-width:68ch;margin:0 0 10px;font-size:17px}
+.lead .why{color:var(--mute)}
+.ov{max-width:70ch;color:var(--mute);margin:14px 0 0;font-size:16px}
+.stripe{margin-top:26px}
+.cells{display:flex;gap:3px;height:46px}
+.cell{flex:1 1 0;max-width:42px;border:0;border-radius:3px;cursor:pointer;padding:0;opacity:.95}
+.cell.empty{background:var(--empty);cursor:default}
+.cell[aria-current=true]{outline:2px solid var(--ink);outline-offset:2px}
+.cell:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:13px;color:var(--mute);margin-top:8px}
+.ramp{display:flex;width:160px;height:8px;border-radius:4px;overflow:hidden}.ramp i{flex:1}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:40px;align-items:start}
+@media(max-width:900px){.grid{grid-template-columns:minmax(0,1fr)}}
+aside{display:grid;gap:22px}
+@media(min-width:901px){aside{position:sticky;top:16px}}
+.panel{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:16px}
+.panel h3{font:600 17px "Red Hat Display",sans-serif;margin:0 0 10px}
+input[type=search]{width:100%;font:16px "Red Hat Text",sans-serif;padding:11px 12px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);min-height:44px}
+input:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chip{font:500 14px "Red Hat Text",sans-serif;min-height:36px;padding:6px 12px;border-radius:18px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;display:inline-flex;gap:7px;align-items:center}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+.dot{width:9px;height:9px;border-radius:50%;flex:none}
+.dl{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.dl li{display:grid;grid-template-columns:62px minmax(0,1fr);gap:12px;align-items:start}
+.dd{font:800 15px/1.3 "Red Hat Display",sans-serif;white-space:nowrap;padding-top:1px}
+.kind{display:block;font:600 12px/1.3 "Red Hat Text",sans-serif;color:var(--mute);margin-bottom:2px}
+.dl a{display:block;line-height:1.35;overflow-wrap:anywhere}
+.dl a{font-weight:600}.dl p{margin:2px 0 0;font-size:14px;color:var(--mute)}
+section.sec{margin-bottom:34px}
+.sech{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:6px}
+.sech h2{font:800 20px "Red Hat Display",sans-serif;margin:0}
+.bar{width:28px;height:6px;border-radius:3px}
+article{padding:16px 0;border-bottom:1px solid var(--soft)}
+article:last-child{border-bottom:0}
+article h4{font:600 19px/1.3 "Red Hat Display",sans-serif;margin:6px 0 6px}
+article p{margin:0 0 8px;max-width:72ch}
+.meta{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;font-size:13px;color:var(--mute)}
+.imp{font:600 13px "Red Hat Text";padding:2px 9px;border-radius:10px;white-space:nowrap}
+.imp.high{background:var(--policy);color:#fff}.imp.notable{border:1px solid var(--mute);color:var(--ink)}
+.cityline{border-left:3px solid var(--mute);padding-left:10px;color:var(--ink)}
+.links{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;font-weight:600}
+.links a{text-underline-offset:3px}
+.note{color:var(--mute);font-size:14px}
+details{border-top:1px solid var(--line);padding-top:18px}
+summary{cursor:pointer;font:600 18px "Red Hat Display",sans-serif;min-height:44px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:18px 28px;margin-top:10px}
+.cols h5{margin:0 0 6px;font:600 15px "Red Hat Display"}
+.cols ul,.rules{margin:0;padding-left:18px;font-size:14px}
+.cols li,.rules li{margin-bottom:4px}
+.status{padding:30px 0;color:var(--mute)}
+@media(prefers-reduced-motion:no-preference){.cell{transition:transform .15s}.cell:not(.empty):hover{transform:translateY(-3px)}}
+</style>
+</head>
+<body>
+<header class="mast band"><div class="wrap">
+  <div class="kick"><b>Climate & Energy Brief</b><span id="dateline">Loading today's edition…</span><button class="mode" id="mode" type="button">Light mode</button></div>
+  <div class="lead" id="lead"><h1>Daily briefing on climate, energy and cities</h1></div>
+  <div class="stripe" aria-label="Archive of editions">
+    <div class="cells" id="cells"></div>
+    <div class="legend"><span>Each cell is one edition; colour shows how many high-priority items it had</span>
+      <span class="ramp"><i style="background:#3b4fd8"></i><i style="background:#4fc1c6"></i><i style="background:#f7e463"></i><i style="background:#e8452c"></i></span><span>0 → 3+</span></div>
+  </div>
+</div></header>
+
+<main class="band"><div class="wrap grid">
+  <div id="content"><p class="status" id="status">Loading editions…</p></div>
+  <aside>
+    <div class="panel">
+      <h3>Search the archive</h3>
+      <input type="search" id="q" placeholder="e.g. permitting, heat, EUCF" aria-label="Search all editions">
+      <div class="chips" id="chips"></div>
+    </div>
+    <div class="panel">
+      <h3>Upcoming deadlines</h3>
+      <ul class="dl" id="deadlines"><li class="note">No deadlines loaded yet.</li></ul>
+    </div>
+  </aside>
+</div></main>
+
+<footer class="band" style="padding-top:0"><div class="wrap">
+  <p class="note" style="margin:0 0 18px">This is an AI-generated news digest, compiled automatically each weekday with Claude from public sources. It is a personal project, not an official publication of any organisation. Always check the original source before citing.</p>
+  <details id="how"><summary>How this brief is made: sources and ranking rules</summary>
+    <div id="cfg" class="note">Loads with the first edition.</div>
+  </details>
+</div></footer>
+
+<script>
+{
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const url=u=>/^https?:\/\//i.test(String(u||''))?esc(u):'#';
+const SECTIONS=[["policy","Policy & regulation"],["science","Climate science"],["energy","Energy systems"],["adaptation","Adaptation & resilience"],["cities","Cities & local government"],["funding","Funding & events"]];
+const SEC=Object.fromEntries(SECTIONS);
+const HEAT=n=>n>=3?'#e8452c':n===2?'#f7e463':n===1?'#4fc1c6':'#3b4fd8';
+let editions=[],deadlines=[],config=null,cur=null,filter='all',q='';
+
+const fmt=(d,o)=>{try{return new Date(d+'T12:00:00').toLocaleDateString('en-GB',o)}catch(e){return d}};
+const long=d=>fmt(d,{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+const today=()=>{const t=new Date();return t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0')};
+const highs=e=>(e.items||[]).filter(i=>i.importance==='high').length;
+
+function pick(){
+  const h=location.hash.match(/^#e(\d{4}-\d{2}-\d{2})$/);
+  cur=(h&&editions.find(e=>e.date===h[1]))||editions[0]||null;
+}
+
+function renderCells(){
+  const list=editions.slice(0,30).reverse();
+  const pad=Math.max(0,20-list.length);
+  $('#cells').innerHTML=list.map(e=>`<button class="cell" style="background:${HEAT(highs(e))}" title="${esc(long(e.date))}: ${highs(e)} high-priority" aria-label="Open edition of ${esc(long(e.date))}" aria-current="${cur&&cur.date===e.date}" data-d="${esc(e.date)}"></button>`).join('')+'<span class="cell empty"></span>'.repeat(pad);
+}
+
+function itemHTML(i,showDate){
+  const sec=i.section in SEC?i.section:'policy';
+  return `<article>
+    <div class="meta"><span class="imp ${i.importance==='high'?'high':'notable'}">${i.importance==='high'?'High':'Notable'}</span>${i.heat?'<span class="heat">Heat</span>':''}
+      ${showDate?`<span>${esc(fmt(showDate,{day:'numeric',month:'short',year:'numeric'}))}</span>`:''}
+      ${i.date?`<span>${esc(i.date)}</span>`:''}<span><span class="dot" style="display:inline-block;background:var(--${sec})"></span> ${esc(SEC[sec])}</span></div>
+    <h4>${esc(i.title)}</h4>
+    <p>${esc(i.summary)}</p>
+    ${i.why?`<p class="cityline"><strong>For cities:</strong> ${esc(i.why)}</p>`:''}
+    <div class="links">${i.source&&i.source.url?`<a href="${url(i.source.url)}" target="_blank" rel="noopener">${esc(i.source.name||'Source')} ↗</a>`:''}
+      ${i.full&&i.full.url?`<a href="${url(i.full.url)}" target="_blank" rel="noopener">${esc(i.full.label||'Full text')} ↗</a>`:''}</div>
+  </article>`;
+}
+
+function renderLead(){
+  if(!cur){$('#dateline').textContent='No edition yet';return}
+  const top=(cur.items||[]).find(i=>i.top)||(cur.items||[])[0];
+  $('#dateline').textContent=long(cur.date)+(cur.coverage?' · covers '+cur.coverage:'')+(cur.weekend?' · incl. weekend':'');
+  $('#lead').innerHTML=top?`<h1>${top.source&&top.source.url?`<a href="${url(top.source.url)}" target="_blank" rel="noopener">${esc(top.title)}</a>`:esc(top.title)}</h1>
+    <p>${esc(top.summary)}</p>${top.why?`<p class="why"><strong>For cities:</strong> ${esc(top.why)}</p>`:''}
+    ${cur.overview?`<p class="ov">${esc(cur.overview)}</p>`:''}`:`<h1>${esc(cur.overview||'Quiet day')}</h1>`;
+}
+
+function renderContent(){
+  const box=$('#content');
+  if(q){
+    const k=q.toLowerCase(),hits=[];
+    editions.forEach(e=>(e.items||[]).forEach(i=>{
+      if((filter==='all'||i.section===filter||(filter==='heat'&&i.heat))&&[i.title,i.summary,i.why,(i.source||{}).name].join(' ').toLowerCase().includes(k))hits.push([e.date,i]);
+    }));
+    box.innerHTML=`<section class="sec"><div class="sech"><h2>${hits.length} result${hits.length===1?'':'s'} for “${esc(q)}”</h2></div>${hits.map(([d,i])=>itemHTML(i,d)).join('')||'<p class="note">Nothing in the archive matches. Try a broader word.</p>'}</section>`;
+    return;
+  }
+  if(!cur){box.innerHTML='<p class="status">The first edition hasn\'t been published yet. It appears here after the morning run.</p>';return}
+  const items=(cur.items||[]).filter(i=>(!i.top||filter!=='all')&&(filter!=='heat'||i.heat));
+  const secs=SECTIONS.filter(([k])=>filter==='all'||filter==='heat'||filter===k).map(([k,label])=>{
+    const its=items.filter(i=>i.section===k);
+    if(!its.length)return '';
+    return `<section class="sec"><div class="sech"><span class="bar" style="background:var(--${k})"></span><h2>${label}</h2></div>${its.map(i=>itemHTML(i)).join('')}</section>`;
+  }).join('');
+  box.innerHTML=(secs||'<p class="note">No items in this section today.</p>')+(cur.note?`<p class="note">${esc(cur.note)}</p>`:'');
+}
+
+function renderChips(){
+  $('#chips').innerHTML=[['all','All sections'],['heat','Heat']].concat(SECTIONS).map(([k,l])=>`<button class="chip" data-f="${k}" aria-pressed="${filter===k}">${k!=='all'?`<span class="dot" style="background:var(--${k})"></span>`:''}${l}</button>`).join('');
+}
+
+function renderDeadlines(){
+  const t=today();
+  const up=deadlines.filter(d=>d.date>=t).sort((a,b)=>a.date<b.date?-1:1).slice(0,8);
+  $('#deadlines').innerHTML=up.length?up.map(d=>`<li><span class="dd">${esc(fmt(d.date,{day:'numeric',month:'short'}))}</span>
+    <div>${d.kind?`<span class="kind">${esc(d.kind)}</span>`:''}<a href="${url(d.url)}" target="_blank" rel="noopener">${esc(d.title)}</a>${d.note?`<p>${esc(d.note)}</p>`:''}</div></li>`).join(''):'<li class="note">No upcoming deadlines tracked.</li>';
+}
+
+function renderConfig(){
+  if(!config){return}
+  const g=(config.sources||[]).map(s=>`<div><h5>${esc(s.group)}</h5><ul>${(s.items||[]).map(x=>`<li>${x.url?`<a href="${url(x.url)}" target="_blank" rel="noopener">${esc(x.name)}</a>`:esc(x.name)}</li>`).join('')}</ul></div>`).join('');
+  $('#cfg').innerHTML=`<p>${esc(config.intro||'')}</p><div class="cols">${g}</div><h5 style="margin:18px 0 6px;font:600 15px 'Red Hat Display'">Ranking rules</h5><ul class="rules">${(config.rules||[]).map(r=>`<li>${esc(r)}</li>`).join('')}</ul>`;
+}
+
+function all(){pick();renderCells();renderLead();renderChips();renderContent();renderDeadlines();renderConfig()}
+
+document.addEventListener('click',ev=>{
+  const c=ev.target.closest('.cell[data-d]');if(c){location.hash='e'+c.dataset.d;return}
+  const f=ev.target.closest('.chip');if(f){filter=f.dataset.f;renderChips();renderContent()}
+});
+let qt;$('#q').addEventListener('input',e=>{clearTimeout(qt);qt=setTimeout(()=>{q=e.target.value.trim();renderContent()},200)});
+window.addEventListener('hashchange',()=>{pick();renderCells();renderLead();renderContent();window.scrollTo({top:0})});
+renderChips();
+
+const root=document.documentElement;
+let saved=null;try{saved=localStorage.getItem('brief-mode')}catch(e){}
+const auto=()=>root.dataset.theme==='light'?'light':root.dataset.theme==='dark'?'dark':(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');
+const apply=()=>{const m=saved||auto();root.classList.toggle('light',m==='light');$('#mode').textContent=m==='light'?'Dark mode':'Light mode'};
+$('#mode').addEventListener('click',()=>{saved=root.classList.contains('light')?'dark':'light';try{localStorage.setItem('brief-mode',saved)}catch(e){}apply()});
+const themeObs=new MutationObserver(()=>{if(!saved)apply()});themeObs.observe(root,{attributes:true,attributeFilter:['data-theme']});
+apply();
+
+(async()=>{
+  const get=async p=>{const r=await fetch(p+'?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error(p);return r.json()};
+  try{
+    const [eds,dls,cfg]=await Promise.all([get('data/editions.json'),get('data/deadlines.json').catch(()=>[]),get('data/config.json').catch(()=>null)]);
+    editions=(Array.isArray(eds)?eds:[]).filter(e=>e&&e.date).sort((a,b)=>a.date<b.date?1:-1);
+    deadlines=(Array.isArray(dls)?dls:[]).filter(d=>d&&d.date);config=cfg;all();
+  }catch(e){const st=$('#status');if(st)st.textContent='The editions could not be loaded. Try reloading the page.'}
+})();
+}
+</script>
+</body>
+</html>
