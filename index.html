@@ -79,12 +79,20 @@ summary{cursor:pointer;font:600 18px "Red Hat Display",sans-serif;min-height:44p
 .cols ul,.rules{margin:0;padding-left:18px;font-size:14px}
 .cols li,.rules li{margin-bottom:4px}
 .status{padding:30px 0;color:var(--mute)}
+.arch{list-style:none;margin:0 0 10px;padding:0;display:grid;gap:2px}
+.arch a{display:grid;grid-template-columns:120px minmax(0,1fr) auto;gap:14px;padding:10px 10px;text-decoration:none;border-radius:6px;min-height:44px;align-items:baseline}
+.arch a:hover,.arch a[aria-current=true]{background:var(--bg2)}
+.ad{font-weight:600;white-space:nowrap}.at{font-weight:500}.an{color:var(--mute);font-size:13px;white-space:nowrap}
+.arch-m{font:600 16px "Red Hat Display",sans-serif;margin:20px 0 6px;color:var(--mute)}
+.jump{font:600 14px "Red Hat Text",sans-serif;min-height:44px;padding:0 14px;border-radius:22px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+#dateline a{font-weight:600}
+@media(max-width:600px){.arch a{grid-template-columns:minmax(0,1fr);gap:2px}}
 @media(prefers-reduced-motion:no-preference){.cell{transition:transform .15s}.cell:not(.empty):hover{transform:translateY(-3px)}}
 </style>
 </head>
 <body>
 <header class="mast band"><div class="wrap">
-  <div class="kick"><b>Climate & Energy Brief</b><span id="dateline">Loading today's edition…</span><button class="mode" id="mode" type="button">Light mode</button></div>
+  <div class="kick"><b>Climate & Energy Brief</b><span id="dateline">Loading today's edition…</span><button class="mode" id="mode" type="button">Light mode</button><button class="jump" id="jump" type="button">All editions ↓</button></div>
   <div class="lead" id="lead"><h1>Daily briefing on climate, energy and cities</h1></div>
   <div class="stripe" aria-label="Archive of editions">
     <div class="cells" id="cells"></div>
@@ -107,6 +115,11 @@ summary{cursor:pointer;font:600 18px "Red Hat Display",sans-serif;min-height:44p
     </div>
   </aside>
 </div></main>
+
+<section class="band" id="archive-sec" style="padding-top:0"><div class="wrap">
+  <div class="sech"><span class="bar" style="background:var(--mute)"></span><h2>All editions</h2></div>
+  <div id="archive"><p class="note">Loading…</p></div>
+</div></section>
 
 <footer class="band" style="padding-top:0"><div class="wrap">
   <p class="note" style="margin:0 0 18px">This is an AI-generated news digest, compiled automatically each weekday with Claude from public sources. It is a personal project, not an official publication of any organisation. Always check the original source before citing.</p>
@@ -158,7 +171,7 @@ function itemHTML(i,showDate){
 function renderLead(){
   if(!cur){$('#dateline').textContent='No edition yet';return}
   const top=(cur.items||[]).find(i=>i.top)||(cur.items||[])[0];
-  $('#dateline').textContent=long(cur.date)+(cur.coverage?' · covers '+cur.coverage:'')+(cur.weekend?' · incl. weekend':'');
+  $('#dateline').innerHTML=esc(long(cur.date)+(cur.coverage?' · covers '+cur.coverage:'')+(cur.weekend?' · incl. weekend':''))+(editions[0]&&cur.date!==editions[0].date?` · <a href="#e${esc(editions[0].date)}">Back to latest edition</a>`:'');
   $('#lead').innerHTML=top?`<h1>${top.source&&top.source.url?`<a href="${url(top.source.url)}" target="_blank" rel="noopener">${esc(top.title)}</a>`:esc(top.title)}</h1>
     <p>${esc(top.summary)}</p>${top.why?`<p class="why"><strong>For cities:</strong> ${esc(top.why)}</p>`:''}
     ${cur.overview?`<p class="ov">${esc(cur.overview)}</p>`:''}`:`<h1>${esc(cur.overview||'Quiet day')}</h1>`;
@@ -201,14 +214,24 @@ function renderConfig(){
   $('#cfg').innerHTML=`<p>${esc(config.intro||'')}</p><div class="cols">${g}</div><h5 style="margin:18px 0 6px;font:600 15px 'Red Hat Display'">Ranking rules</h5><ul class="rules">${(config.rules||[]).map(r=>`<li>${esc(r)}</li>`).join('')}</ul>`;
 }
 
-function all(){pick();renderCells();renderLead();renderChips();renderContent();renderDeadlines();renderConfig()}
+function renderArchive(){
+  const box=$('#archive');
+  if(!editions.length){box.innerHTML='<p class="note">No editions yet.</p>';return}
+  const g={};editions.forEach(e=>{const k=e.date.slice(0,7);(g[k]=g[k]||[]).push(e)});
+  box.innerHTML=Object.keys(g).sort().reverse().map(k=>`<h3 class="arch-m">${esc(fmt(k+'-15',{month:'long',year:'numeric'}))}</h3><ul class="arch">${g[k].map(e=>{
+    const its=e.items||[],t=its.find(i=>i.top)||its[0],h=its.some(i=>i.heat);
+    return `<li><a href="#e${esc(e.date)}"${cur&&cur.date===e.date?' aria-current="true"':''}><span class="ad">${esc(fmt(e.date,{weekday:'short',day:'numeric',month:'short'}))}</span><span class="at">${esc(t?t.title:(e.overview||''))}</span><span class="an">${its.length} item${its.length===1?'':'s'}${h?' · Heat':''}</span></a></li>`}).join('')}</ul>`).join('');
+}
+
+function all(){pick();renderCells();renderLead();renderChips();renderContent();renderDeadlines();renderConfig();renderArchive()}
 
 document.addEventListener('click',ev=>{
   const c=ev.target.closest('.cell[data-d]');if(c){location.hash='e'+c.dataset.d;return}
   const f=ev.target.closest('.chip');if(f){filter=f.dataset.f;renderChips();renderContent()}
 });
 let qt;$('#q').addEventListener('input',e=>{clearTimeout(qt);qt=setTimeout(()=>{q=e.target.value.trim();renderContent()},200)});
-window.addEventListener('hashchange',()=>{pick();renderCells();renderLead();renderContent();window.scrollTo({top:0})});
+window.addEventListener('hashchange',()=>{pick();renderCells();renderLead();renderContent();renderArchive();window.scrollTo({top:0})});
+$('#jump').addEventListener('click',()=>$('#archive-sec').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));
 renderChips();
 
 const root=document.documentElement;
