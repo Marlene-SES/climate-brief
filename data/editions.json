@@ -1,13 +1,195 @@
 [
-{"date":"2026-11-20","coverage":"17–20 Nov (first edition)","weekend":false,"generatedAt":"2026-11-20T09:00:00Z",
-"overview":"The UN climate summit COP31 is on its last scheduled day, and the draft deal no longer mentions fossil fuels. In Brussels, the EU agreed faster permits for power grids and clean energy, delayed parts of its methane rules, and the EU energy regulators' agency showed how much countries spend to keep the lights on.",
-"note":"No major climate-science release this week. The next monthly Copernicus climate update usually comes early in the month.",
-"items":[
-{"id":"cop31-final-day","top":true,"section":"policy","importance":"high","date":"19–20 Nov","title":"COP31's final day: draft deal drops all mention of fossil fuels","summary":"The latest draft of the summit's main decision, published on 19 November, no longer mentions moving away from fossil fuels. An earlier draft from 16 November did. The draft still includes a goal for electricity to make up 35% of the world's energy use by 2035. Countries have not agreed how much money rich countries should give for adaptation, and talks will probably run past Friday. The EU signed up to the 35%-by-2035 electricity pledge on 18 November.","why":"Without clear words on fossil fuels, cities that plan to phase out coal, oil and gas get less backing from the global level. The electricity goal and the adaptation money both affect what support cities can expect next year.","source":{"name":"Down To Earth","url":"https://www.downtoearth.org.in/climate-change/cop31-cover-decision-draft-drops-fossil-fuel-phaseout-language-retains-35-by-35-electrification-target"},"full":{"label":"Draft decision text, 19 Nov (UNFCCC)","url":"https://unfccc.int/sites/default/files/resource/Upload_dt_cop31_cover_decision.pdf"}},
-{"id":"permitting-directive-deal","section":"energy","importance":"high","date":"18 Nov","title":"EU agrees faster permits for power grids, solar, batteries and charging points","summary":"The European Parliament and EU governments reached a provisional deal on a new law to speed up permits. It changes three existing EU energy laws. Permits for solar panels with batteries on the same site must be decided within three months, and each country must offer one online portal for all permit steps. After final approval, countries have 18 months to put the rules into national law. A second law on planning cross-border energy infrastructure is still being negotiated.","why":"Municipalities often handle permits and local grid questions, so the shorter deadlines and the national portal will change their daily work. According to the Parliament, countries may also support households struggling to pay energy bills.","source":{"name":"European Commission","url":"https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2450"},"full":{"label":"Deadline details (electrive)","url":"https://electrive.com/2026/11/18/eu-accelerates-approvals-for-power-grids-and-charging-stations"}},
-{"id":"acer-security-of-supply-2026","section":"energy","importance":"notable","date":"19 Nov","title":"EU countries spent about €12 billion in 2025 to keep enough power available","summary":"ACER, the EU agency of energy regulators, reports that eleven countries now pay power plants to stay available for times of shortage. Three quarters of the approved state support goes to fossil-fuel plants. ACER expects data centres to use 134 TWh of electricity by 2030 and 199 TWh by 2035, about 4.5% of all EU demand. It asks countries to keep these costs down, work together across borders and make it easier for clean options such as batteries to compete.","why":"Electricity customers pay for these schemes in the end. The figures on data centres and flexible power are useful evidence when cities plan their grids and heating.","source":{"name":"ACER","url":"https://www.acer.europa.eu/news/eu-spending-electricity-support-measures-reaches-eur12-billion-2025-reliance-grows"},"full":{"label":"Full report (PDF)","url":"https://www.acer.europa.eu/sites/default/files/documents/Publications/ACER-2026-Monitoring-Report-Security-of-EU-electricity-supply.pdf"}},
-{"id":"methane-regulation-delay","section":"policy","importance":"notable","date":"19 Nov","title":"EU delays parts of its methane rules by two years","summary":"The European Parliament and EU governments provisionally agreed to give gas importers and operators two more years to meet some requirements of the EU rules on methane, a strong greenhouse gas. They point to strained energy supply linked to the conflict in the Middle East. The Commission says the overall goals of the rules stay the same. Both institutions still need to approve the change formally.","why":"Little direct effect on municipalities. It shows how energy-security worries are shaping EU climate rules right now.","source":{"name":"European Commission, Energy","url":"https://energy.ec.europa.eu/news/co-legislators-agree-targeted-amendment-methane-regulation-ensure-supply-security-amid-energy-crisis-2026-11-19_en"},"full":null},
-{"id":"interreg-adaptation-brief","section":"adaptation","importance":"notable","heat":true,"date":"Nov 2026","title":"New collection of local examples for coping with heat, floods and drought","summary":"A November policy brief from Interreg Europe looks at this year's heatwaves, droughts and wildfires in Europe. It shows examples from regions and cities, including flood protection using nature along a whole river basin in Belgium, Poland's 'My water' programme, a storm-surge wall in Denmark, and an urban heat and green-space observatory in Greece.","why":"Ready-made examples for learning from other cities, for training material or for case studies in project proposals. The Greek heat observatory is directly relevant to urban heat planning.","source":{"name":"Interreg Europe (PDF)","url":"https://www.interregeurope.eu/sites/default/files/2026-11/Policy%20brief%20on%20Climate%20adaptation.pdf"},"full":null},
-{"id":"eucf-call-8","section":"funding","importance":"notable","date":"Open until 21 Dec","title":"European City Facility: €60,000 for municipalities to plan energy investments","summary":"The European City Facility, funded by the EU's LIFE programme, will give 62 municipalities or groups of municipalities €60,000 each. The money pays for an investment plan for energy saving, heating and cooling, or clean energy. New this time: a local heating and cooling plan is enough to apply. A climate and energy action plan (SECAP) still works too.","why":"One of the few EU grants that goes straight to municipalities. The heating-plan option suits German municipalities that are already doing their municipal heat planning (Wärmeplanung).","source":{"name":"European City Facility","url":"https://www.eucityfacility.eu/calls/call-8"},"full":{"label":"Call announcement","url":"https://www.eucityfacility.eu/news/european-city-facility-call-offers-eur60-000-to-develop-investment-concepts"}}
-]}
+ {
+  "coverage": "Fri 20 – Mon 23 Nov",
+  "date": "2026-11-23",
+  "generatedAt": "2026-11-23T06:20:00Z",
+  "weekend": true,
+  "overview": "The UN climate summit COP31 in Antalya ended on Sunday without an overall agreement, after European countries rejected a draft that did not mention fossil fuels. Alongside the talks, the EU joined a global pledge to cut energy use in buildings, and EU gas experts said Europe is ready for winter.",
+  "note": "A quiet weekend for new EU laws, funding calls and science reports. The Commission's Hydrogen Strategy consultation closes today (23 Nov).",
+  "items": [
+   {
+    "date": "22 Nov",
+    "full": null,
+    "id": "cop31-no-deal",
+    "importance": "high",
+    "section": "policy",
+    "top": true,
+    "source": {
+     "name": "CBS News",
+     "url": "https://www.cbsnews.com/news/un-cop31-climate-conference-ends-no-agreement-fossil-fuel-debate-standstill/"
+    },
+    "summary": "The UN climate summit in Antalya, Türkiye, closed on Sunday 22 November, two days late, without agreeing its main text. European countries and others objected because the final draft no longer mentioned moving away from fossil fuels; the draft had called for electricity to supply over a third of global energy by 2035. The UN climate chief said some decisions were still made, including on a just transition (a fair shift for workers and communities). Open questions now move on to next year's summit, COP32.",
+    "title": "COP31 ends without an overall climate deal",
+    "why": "Cities get no new global signal on phasing out coal, oil and gas, and no clear answer on more money for adaptation. Local climate plans will lean even more on EU and national rules than on the UN process."
+   },
+   {
+    "date": "17 Nov",
+    "full": null,
+    "heat": true,
+    "id": "cop31-heat-cooling-roadmap",
+    "importance": "high",
+    "section": "adaptation",
+    "source": {
+     "name": "UNEP",
+     "url": "https://www.unep.org/en/news-and-stories/press-release/cop31-governments-back-action-extreme-heat-and-sustainable-cooling"
+    },
+    "summary": "At a ministers' meeting during COP31, the UN Environment Programme (UNEP) presented a global roadmap on heat resilience and sustainable cooling, linked to the Global Cooling Pledge. Singapore, Brazil, Japan and the United Kingdom signed up, and more than 20 million US dollars in new support was announced. The pledge aims to cut emissions from cooling by 68% by 2050; UNEP warns nearly three billion people could lack cooling by 2050.",
+    "title": "Countries back a global roadmap on extreme heat and cooling",
+    "why": "Cities can join the Global Cooling Pledge, and the roadmap gives a frame for local heat plans that use shade, green space and efficient cooling rather than only air conditioning."
+   },
+   {
+    "date": "20 Nov",
+    "full": {
+     "label": "Compact text (COP31 Presidency, PDF)",
+     "url": "https://cop31.tr/assets/docs/action-agenda/cop31-energy-efficient-buildings-compact-text.pdf"
+    },
+    "id": "antalya-buildings-compact",
+    "importance": "notable",
+    "section": "energy",
+    "source": {
+     "name": "European Commission, Energy",
+     "url": "https://energy.ec.europa.eu/news/eu-backs-global-compact-cut-energy-bills-and-emissions-buildings-2026-11-20_en"
+    },
+    "summary": "The EU endorsed the Antalya Compact for Energy Efficient Buildings, signed by 24 countries at COP31. The shared, non-binding goal is to cut the energy used per square metre of buildings by at least 25% by 2035, compared with 2020, and to switch more buildings to electricity. The Global Alliance for Buildings and Construction will track progress in its yearly report.",
+    "title": "EU joins global pledge to cut energy use in buildings by a quarter",
+    "why": "In the EU, this goal works through national building renovation plans under the Energy Performance of Buildings Directive, which cities help deliver through renovation programmes and heat planning."
+   },
+   {
+    "date": "20 Nov",
+    "full": null,
+    "id": "eu-gas-winter-2026",
+    "importance": "notable",
+    "section": "energy",
+    "source": {
+     "name": "European Commission, Energy",
+     "url": "https://energy.ec.europa.eu/news/gas-coordination-group-confirms-eus-winter-preparedness-importance-gas-storage-through-winter-2026-11-20_en"
+    },
+    "summary": "The EU's Gas Coordination Group said gas storage was at about 70% and no risks to winter supply have been reported, though prices remain a challenge. Storage already helped during the first cold spell with little wind. The full end of Russian liquefied gas (LNG) imports is due on 1 January 2027, and the Commission expects no immediate supply problems.",
+    "title": "EU gas experts: Europe is ready for winter despite high prices",
+    "why": "Supply looks secure, but high prices still matter for households struggling with energy bills and for municipal utilities and heating networks that rely on gas."
+   },
+   {
+    "date": "20 Nov",
+    "full": null,
+    "id": "germany-housing-lifecycle-co2",
+    "importance": "notable",
+    "section": "cities",
+    "source": {
+     "name": "Clean Energy Wire",
+     "url": "https://www.cleanenergywire.org/news/germany-tie-support-new-homes-buildings-lifecycle-emissions"
+    },
+    "summary": "Germany's construction minister Verena Hubertz plans to merge building support schemes into two programmes from mid-2027. Grants would depend on a building's emissions over its whole life (materials, transport, construction, use and demolition) rather than mainly on insulation values. The current EH55 new-build scheme ends at the end of 2026.",
+    "title": "Germany plans to link housing grants to a building's total CO2",
+    "why": "Municipal housing companies and planners in Germany will need lifecycle CO2 figures for new projects, in line with EU rules that require them for large new buildings from 2028 and all new buildings from 2030."
+   }
+  ]
+ },
+ {
+  "date": "2026-11-20",
+  "coverage": "17–20 Nov (first edition)",
+  "weekend": false,
+  "generatedAt": "2026-11-20T09:00:00Z",
+  "overview": "The UN climate summit COP31 is on its last scheduled day, and the draft deal no longer mentions fossil fuels. In Brussels, the EU agreed faster permits for power grids and clean energy, delayed parts of its methane rules, and the EU energy regulators' agency showed how much countries spend to keep the lights on.",
+  "note": "No major climate-science release this week. The next monthly Copernicus climate update usually comes early in the month.",
+  "items": [
+   {
+    "id": "cop31-final-day",
+    "top": true,
+    "section": "policy",
+    "importance": "high",
+    "date": "19–20 Nov",
+    "title": "COP31's final day: draft deal drops all mention of fossil fuels",
+    "summary": "The latest draft of the summit's main decision, published on 19 November, no longer mentions moving away from fossil fuels. An earlier draft from 16 November did. The draft still includes a goal for electricity to make up 35% of the world's energy use by 2035. Countries have not agreed how much money rich countries should give for adaptation, and talks will probably run past Friday. The EU signed up to the 35%-by-2035 electricity pledge on 18 November.",
+    "why": "Without clear words on fossil fuels, cities that plan to phase out coal, oil and gas get less backing from the global level. The electricity goal and the adaptation money both affect what support cities can expect next year.",
+    "source": {
+     "name": "Down To Earth",
+     "url": "https://www.downtoearth.org.in/climate-change/cop31-cover-decision-draft-drops-fossil-fuel-phaseout-language-retains-35-by-35-electrification-target"
+    },
+    "full": {
+     "label": "Draft decision text, 19 Nov (UNFCCC)",
+     "url": "https://unfccc.int/sites/default/files/resource/Upload_dt_cop31_cover_decision.pdf"
+    }
+   },
+   {
+    "id": "permitting-directive-deal",
+    "section": "energy",
+    "importance": "high",
+    "date": "18 Nov",
+    "title": "EU agrees faster permits for power grids, solar, batteries and charging points",
+    "summary": "The European Parliament and EU governments reached a provisional deal on a new law to speed up permits. It changes three existing EU energy laws. Permits for solar panels with batteries on the same site must be decided within three months, and each country must offer one online portal for all permit steps. After final approval, countries have 18 months to put the rules into national law. A second law on planning cross-border energy infrastructure is still being negotiated.",
+    "why": "Municipalities often handle permits and local grid questions, so the shorter deadlines and the national portal will change their daily work. According to the Parliament, countries may also support households struggling to pay energy bills.",
+    "source": {
+     "name": "European Commission",
+     "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2450"
+    },
+    "full": {
+     "label": "Deadline details (electrive)",
+     "url": "https://electrive.com/2026/11/18/eu-accelerates-approvals-for-power-grids-and-charging-stations"
+    }
+   },
+   {
+    "id": "acer-security-of-supply-2026",
+    "section": "energy",
+    "importance": "notable",
+    "date": "19 Nov",
+    "title": "EU countries spent about €12 billion in 2025 to keep enough power available",
+    "summary": "ACER, the EU agency of energy regulators, reports that eleven countries now pay power plants to stay available for times of shortage. Three quarters of the approved state support goes to fossil-fuel plants. ACER expects data centres to use 134 TWh of electricity by 2030 and 199 TWh by 2035, about 4.5% of all EU demand. It asks countries to keep these costs down, work together across borders and make it easier for clean options such as batteries to compete.",
+    "why": "Electricity customers pay for these schemes in the end. The figures on data centres and flexible power are useful evidence when cities plan their grids and heating.",
+    "source": {
+     "name": "ACER",
+     "url": "https://www.acer.europa.eu/news/eu-spending-electricity-support-measures-reaches-eur12-billion-2025-reliance-grows"
+    },
+    "full": {
+     "label": "Full report (PDF)",
+     "url": "https://www.acer.europa.eu/sites/default/files/documents/Publications/ACER-2026-Monitoring-Report-Security-of-EU-electricity-supply.pdf"
+    }
+   },
+   {
+    "id": "methane-regulation-delay",
+    "section": "policy",
+    "importance": "notable",
+    "date": "19 Nov",
+    "title": "EU delays parts of its methane rules by two years",
+    "summary": "The European Parliament and EU governments provisionally agreed to give gas importers and operators two more years to meet some requirements of the EU rules on methane, a strong greenhouse gas. They point to strained energy supply linked to the conflict in the Middle East. The Commission says the overall goals of the rules stay the same. Both institutions still need to approve the change formally.",
+    "why": "Little direct effect on municipalities. It shows how energy-security worries are shaping EU climate rules right now.",
+    "source": {
+     "name": "European Commission, Energy",
+     "url": "https://energy.ec.europa.eu/news/co-legislators-agree-targeted-amendment-methane-regulation-ensure-supply-security-amid-energy-crisis-2026-11-19_en"
+    },
+    "full": null
+   },
+   {
+    "id": "interreg-adaptation-brief",
+    "section": "adaptation",
+    "importance": "notable",
+    "heat": true,
+    "date": "Nov 2026",
+    "title": "New collection of local examples for coping with heat, floods and drought",
+    "summary": "A November policy brief from Interreg Europe looks at this year's heatwaves, droughts and wildfires in Europe. It shows examples from regions and cities, including flood protection using nature along a whole river basin in Belgium, Poland's 'My water' programme, a storm-surge wall in Denmark, and an urban heat and green-space observatory in Greece.",
+    "why": "Ready-made examples for learning from other cities, for training material or for case studies in project proposals. The Greek heat observatory is directly relevant to urban heat planning.",
+    "source": {
+     "name": "Interreg Europe (PDF)",
+     "url": "https://www.interregeurope.eu/sites/default/files/2026-11/Policy%20brief%20on%20Climate%20adaptation.pdf"
+    },
+    "full": null
+   },
+   {
+    "id": "eucf-call-8",
+    "section": "funding",
+    "importance": "notable",
+    "date": "Open until 21 Dec",
+    "title": "European City Facility: €60,000 for municipalities to plan energy investments",
+    "summary": "The European City Facility, funded by the EU's LIFE programme, will give 62 municipalities or groups of municipalities €60,000 each. The money pays for an investment plan for energy saving, heating and cooling, or clean energy. New this time: a local heating and cooling plan is enough to apply. A climate and energy action plan (SECAP) still works too.",
+    "why": "One of the few EU grants that goes straight to municipalities. The heating-plan option suits German municipalities that are already doing their municipal heat planning (Wärmeplanung).",
+    "source": {
+     "name": "European City Facility",
+     "url": "https://www.eucityfacility.eu/calls/call-8"
+    },
+    "full": {
+     "label": "Call announcement",
+     "url": "https://www.eucityfacility.eu/news/european-city-facility-call-offers-eur60-000-to-develop-investment-concepts"
+    }
+   }
+  ]
+ }
 ]
