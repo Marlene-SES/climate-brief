@@ -1,5 +1,79 @@
 [
  {
+  "coverage": "Mon 23 – Tue 24 Nov",
+  "date": "2026-11-24",
+  "generatedAt": "2026-11-24T05:47:58Z",
+  "weekend": false,
+  "note": "A quiet day after COP31: no new EU laws, votes or major reports in the window.",
+  "overview": "Eight EU countries asked the European Commission not to delay or weaken the new carbon price on heating and road fuels, which is due to start in 2028. More details emerged on what the COP31 climate talks did agree, and a city survey shows how hard last summer's heat hit Europe's cities.",
+  "items": [
+   {
+    "date": "23 Nov",
+    "full": null,
+    "id": "ets2-eight-countries-letter",
+    "importance": "high",
+    "section": "policy",
+    "top": true,
+    "source": {
+     "name": "Euronews",
+     "url": "https://www.euronews.com/2026/11/23/eight-eu-countries-join-forces-to-defend-carbon-market-against-calls-for-delay"
+    },
+    "summary": "Climate ministers from Denmark, Finland, Germany, Luxembourg, the Netherlands, Portugal, Spain and Sweden wrote to EU Climate Commissioner Wopke Hoekstra. They want the second EU Emissions Trading System (ETS2), a carbon price on fuels for heating buildings and road transport, to start as planned in January 2028, without new delays or changes. Other countries, including the Czech Republic and Italy, want to soften or delay it, and the Commission is now reviewing its impact before the start.",
+    "title": "Eight EU countries push to keep the carbon price on heating and fuel on schedule",
+    "why": "ETS2 will raise heating and fuel bills, but it also pays into the Social Climate Fund that is meant to help vulnerable households, so the outcome shapes local energy poverty work and the case for switching homes to clean heating."
+   },
+   {
+    "date": "23 Nov",
+    "full": null,
+    "id": "cop31-what-was-agreed",
+    "importance": "notable",
+    "section": "policy",
+    "source": {
+     "name": "Carbon Brief",
+     "url": "https://www.carbonbrief.org/cop31-key-outcomes-agreed-at-the-un-climate-talks-in-antalya"
+    },
+    "summary": "The Antalya talks ended nearly 50 hours late, the longest UN climate summit on record, and at least 32 countries rejected the summit's main decision. Countries did adopt several separate decisions, including on a just transition, the global goal on adaptation and carbon markets, but set no figure for tripling money for adaptation. An expert group will refine the 59 adaptation indicators agreed last year, and COP32 will take place in Ethiopia in November 2027.",
+    "title": "COP31: what the climate talks did agree despite no overall deal",
+    "why": "Without a global target for adaptation money, cities in Europe and beyond cannot count on new international funds for adaptation soon; the indicator work may later shape how local resilience is measured."
+   },
+   {
+    "date": "19 Nov",
+    "full": {
+     "label": "CIDOB and Eurocities research on urban climate resilience",
+     "url": "https://www.cidob.org/en/publications/urban-climate-resilience-europe"
+    },
+    "heat": true,
+    "id": "eurocities-summer-heat-survey",
+    "importance": "high",
+    "section": "adaptation",
+    "source": {
+     "name": "Eurocities",
+     "url": "https://eurocities.eu/latest/europes-cities-cannot-afford-another-summer-of-climate-emergencies/"
+    },
+    "summary": "Early results from a Eurocities survey of 40 cities in 16 countries show that more than half had three or more heatwaves in summer 2026, and 52% saw moderate or severe strain on health and emergency services. Only 38% had some data on how heat affected people's health. Eurocities wants the European Heatwave Plan, expected in early 2027, to give cities better health data, stronger heat warnings and steady funding for cooling and green spaces.",
+    "title": "City survey: last summer's heat strained health services in half of Europe's cities",
+    "why": "The figures give local governments evidence for heat action plans and for asking national governments and the next EU budget for adaptation money and staff."
+   },
+   {
+    "date": "Closes 3 Dec",
+    "full": {
+     "label": "ECT2 call guidelines (PDF)",
+     "url": "https://netzerocities.eu/wp-content/uploads/2026/08/NZC-SGA3-ECT2-call-guidelines.pdf"
+    },
+    "id": "netzerocities-ect2-closing",
+    "importance": "high",
+    "section": "funding",
+    "source": {
+     "name": "ERRIN",
+     "url": "https://errin.eu/calls/netzerocities-ect2-enabling-city-transformation-2"
+    },
+    "summary": "The NetZeroCities 'Enabling City Transformation 2' call offers €8 million in total, with €500,000 to €1.5 million per proposal depending on how many Mission Cities join. Only the cities chosen for the EU Mission for 100 climate-neutral and smart cities can lead, and regions, universities, companies and NGOs can join as partners. The deadline is 3 December 2026 at 12:00, and the funded work runs from April 2027 to January 2029.",
+    "title": "NetZeroCities grants for Mission Cities close on 3 December",
+    "why": "Mission Cities can use this to move from pilot projects to city-wide climate-neutral solutions, and teaming up with other Mission Cities unlocks bigger grants."
+   }
+  ]
+ },
+ {
   "coverage": "Fri 20 – Mon 23 Nov",
   "date": "2026-11-23",
   "generatedAt": "2026-11-23T06:20:00Z",
