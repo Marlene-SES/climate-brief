@@ -1,5 +1,94 @@
 [
  {
+  "coverage": "Tue 24 – Wed 25 Nov",
+  "date": "2026-11-25",
+  "generatedAt": "2026-11-25T07:20:00+01:00",
+  "weekend": false,
+  "note": "A quiet day for new EU laws, funding calls and German news; no new deadlines found.",
+  "overview": "England recorded its highest number of heat-linked deaths since monitoring began, and EU regions met in Dublin to speed up adaptation. In Strasbourg, the European Parliament approved a carbon market change and delayed its vote on faster environmental assessments to today.",
+  "items": [
+   {
+    "date": "24 Nov",
+    "full": {
+     "label": "Interim heat mortality report, England, May and June 2026",
+     "url": "https://www.gov.uk/government/publications/interim-heat-mortality-monitoring-report-england-may-and-june-2026"
+    },
+    "heat": true,
+    "id": "england-record-heat-deaths-2026",
+    "importance": "high",
+    "section": "adaptation",
+    "top": true,
+    "source": {
+     "name": "GOV.UK (UK Health Security Agency)",
+     "url": "https://www.gov.uk/government/news/ukhsa-data-shows-full-impact-of-summer-heatwaves-and-heat-associated-deaths"
+    },
+    "summary": "The UK Health Security Agency (UKHSA) estimates that 5,258 deaths in England between May and September 2026 were linked to heat. This is the highest number since its yearly reports began in 2016; the previous high was 2,985 in 2022. There were seven heat periods lasting 41 days in total, and the figures are provisional, with age details due in early 2027.",
+    "title": "England had a record 5,258 heat-linked deaths this summer",
+    "why": "The agency says homes, neighbourhoods and care services must be adapted to higher temperatures, which is largely local government work such as heat plans, cooling spaces and checks on vulnerable people."
+   },
+   {
+    "date": "24 Nov",
+    "full": null,
+    "heat": true,
+    "id": "adaptation-mission-forum-dublin",
+    "importance": "notable",
+    "section": "adaptation",
+    "source": {
+     "name": "European Commission, DG Climate Action",
+     "url": "https://climate.ec.europa.eu/news-other-reads/news/representatives-european-regions-and-local-communities-gather-dublin-accelerate-adaptation-climate-2026-11-24-0_en"
+    },
+    "summary": "Regions, cities and national authorities met in Dublin for the fifth Forum of the EU Mission on Adaptation to Climate Change, hosted by the Irish Council Presidency and the European Commission. The Commission said this year's heatwaves caused an estimated €113 billion in lost economic output across 30 countries. The forum also discussed the Commission's October plan for a new Climate Resilience Law.",
+    "title": "EU adaptation forum in Dublin: 2026 heatwaves cost Europe €113 billion",
+    "why": "The Adaptation Mission is a main EU route for regions and cities to share tools and find support, and the planned resilience law may set clearer duties for local climate-risk planning."
+   },
+   {
+    "date": "24 Nov",
+    "full": null,
+    "id": "ets-market-stability-reserve-vote",
+    "importance": "high",
+    "section": "policy",
+    "source": {
+     "name": "HowTheyVote.eu",
+     "url": "https://howtheyvote.eu/votes/200575"
+    },
+    "summary": "The European Parliament approved a deal with EU governments on the reserve of the EU Emissions Trading System (ETS), the EU carbon market, by 403 votes to 78, with 146 abstentions. Spare permits in the reserve will still be cancelled, but only above 700 million permits instead of 400 million; the Commission had proposed to stop cancelling them altogether. EU governments must now formally approve it, and it applies three days after publication.",
+    "title": "Parliament approves change to the carbon market's reserve",
+    "why": "Keeping more permits in reserve can help calm carbon prices, which affect energy costs for cities, utilities and households; the wider carbon market reform is still being negotiated."
+   },
+   {
+    "date": "24 Nov",
+    "full": {
+     "label": "European Parliament research briefing on Omnibus VIII",
+     "url": "https://research.europarl.europa.eu/EPRS_ATA(2026)797037?locale=EN"
+    },
+    "id": "omnibus-viii-environmental-assessments-postponed",
+    "importance": "notable",
+    "section": "policy",
+    "source": {
+     "name": "Agence Europe",
+     "url": "https://agenceurope.eu/en/bulletin/article/13989/18/meps-postpone-plenary-vote-on-environmental-assessments-until-wednesday-25-november"
+    },
+    "summary": "Members of the European Parliament voted 390 to 258 to postpone their vote on the 'Omnibus VIII' proposal, which aims to speed up environmental assessments and permits. The disagreement is over how strictly protected species must be safeguarded. The Parliament's environment committee wants a 300-day limit for a full environmental assessment; the vote is now set for Wednesday 25 November.",
+    "title": "Parliament delays vote on faster environmental checks to 25 November",
+    "why": "Faster assessments would affect how quickly local energy, grid and infrastructure projects get permits, but also how nature is protected in local planning."
+   },
+   {
+    "date": "24 Nov",
+    "full": null,
+    "id": "eu-un-climate-talks-reform",
+    "importance": "notable",
+    "section": "policy",
+    "source": {
+     "name": "Euronews",
+     "url": "https://www.euronews.com/2026/11/24/eu-pushes-to-overhaul-un-climate-summits-after-cop31-collapse"
+    },
+    "summary": "A senior European Commission official said the EU is preparing proposals to reform the yearly UN climate summits after COP31 in Antalya ended without an agreed political statement. Ideas include more open negotiations, a way to stop a single country blocking a large majority, and fewer side tracks. The Commission will draw up the proposals with EU countries; no date has been set.",
+    "title": "EU wants to reform UN climate summits after COP31 failure",
+    "why": "If global talks stall, more of the push may come from groups of willing countries and from cities and regions acting on their own."
+   }
+  ]
+ },
+ {
   "coverage": "Mon 23 – Tue 24 Nov",
   "date": "2026-11-24",
   "generatedAt": "2026-11-24T05:47:58Z",
