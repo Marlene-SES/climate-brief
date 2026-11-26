@@ -1,5 +1,47 @@
 [
  {
+  "coverage": "Wed 25 – Thu 26 Nov",
+  "date": "2026-11-26",
+  "generatedAt": "2026-11-26T07:15:00+01:00",
+  "weekend": false,
+  "note": "A quiet day: official EU news pages showed few new energy or climate items, and no new heat news or funding deadlines were found in the window.",
+  "overview": "The European Parliament adopted its position on faster environmental checks for plans and projects, including a call to review the EU's main nature protection laws. A new German research report says the country can still reach climate neutrality by 2045, but only if emissions fall almost twice as fast as before.",
+  "items": [
+   {
+    "date": "25 Nov",
+    "full": {
+     "label": "Vote results (HowTheyVote.eu)",
+     "url": "https://howtheyvote.eu/votes/201445"
+    },
+    "id": "ep-environmental-assessments-position",
+    "importance": "high",
+    "section": "policy",
+    "top": true,
+    "source": {
+     "name": "Agence Europe",
+     "url": "https://agenceurope.eu/en/bulletin/article/13990/6/european-parliament-adopts-controversial-position-on-speeding-up-environmental-assessments"
+    },
+    "summary": "On 25 November the European Parliament adopted its position on simplifying and speeding up environmental assessments (367 for, 268 against, 25 abstentions). A full assessment should take no more than 300 days, with up to 60 extra days in exceptional cases. A separate amendment asks the Commission to review the EU Habitats and Birds Directives within 12 months after the law takes effect; the Parliament will now negotiate the final text with EU governments.",
+    "title": "Parliament backs faster environmental checks and a review of nature laws",
+    "why": "Cities and regions that approve or run projects such as grids, renewables or housing could face shorter deadlines for environmental checks, but the planned review of nature laws may bring further changes and legal uncertainty."
+   },
+   {
+    "date": "24 Nov",
+    "full": null,
+    "id": "ariadne-germany-2045-pathways",
+    "importance": "notable",
+    "section": "energy",
+    "source": {
+     "name": "Clean Energy Wire",
+     "url": "https://www.cleanenergywire.org/news/germany-can-still-reach-2045-climate-target-has-multiple-ways-get-there-report"
+    },
+    "summary": "The state-funded Ariadne research project, led by the Potsdam Institute for Climate Impact Research (PIK), compared five pathways to net zero for Germany. Emissions would need to fall almost twice as fast as in recent decades, and Germany risks missing its target of a 65% cut by 2030 compared with 1990. Using much more electricity instead of fossil fuels, a cleaner power supply and more flexible energy use pay off in every scenario.",
+    "title": "German report: climate neutrality by 2045 is still possible, but needs much faster cuts",
+    "why": "The 'no-regret' measures, such as electrifying heating and transport, match what municipalities control through heat planning, public buildings and local utilities."
+   }
+  ]
+ },
+ {
   "coverage": "Tue 24 – Wed 25 Nov",
   "date": "2026-11-25",
   "generatedAt": "2026-11-25T07:20:00+01:00",
