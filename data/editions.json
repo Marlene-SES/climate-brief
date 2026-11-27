@@ -1,5 +1,73 @@
 [
  {
+  "coverage": "Thu 26 – Fri 27 Nov",
+  "date": "2026-11-27",
+  "generatedAt": "2026-11-27T07:05:00+01:00",
+  "weekend": false,
+  "note": "A quiet day for new EU laws, funding calls and consultations; no new deadlines found.",
+  "overview": "EU leaders ended a special summit without agreeing the EU's next seven-year budget, which decides how much money goes to regions and cities from 2028. Global temperatures stayed more than 2°C above pre-industrial levels for six days in a row, a first, and the European Parliament approved a two-year delay to methane rules for energy importers.",
+  "items": [
+   {
+    "date": "26 Nov",
+    "full": null,
+    "id": "mff-summit-no-deal",
+    "importance": "high",
+    "section": "policy",
+    "top": true,
+    "source": {
+     "name": "EUobserver",
+     "url": "https://euobserver.com/252027/eu-leaders-leave-brussels-with-no-budget-deal-piling-pressure-on-christmas-summit/"
+    },
+    "summary": "At a special summit in Brussels, EU leaders could not agree on the EU budget for 2028–2034. Countries that pay in more, including Germany and the Netherlands, want further cuts, while a group of 17 countries wants to protect money for regions (cohesion funding) and farmers. Talks were based on a compromise about 10% smaller than the Commission's proposal, and leaders will try again at a summit before Christmas.",
+    "title": "EU leaders fail to agree the next long-term EU budget",
+    "why": "This budget decides how much EU money flows to regions and cities for climate, energy and adaptation projects from 2028, and whether local governments keep a direct say in how it is spent."
+   },
+   {
+    "date": "26 Nov",
+    "full": null,
+    "heat": true,
+    "id": "six-days-above-2c",
+    "importance": "high",
+    "section": "science",
+    "source": {
+     "name": "The Independent (via Yahoo News)",
+     "url": "https://sg.news.yahoo.com/world-breaches-2c-temperature-limit-102456862.html"
+    },
+    "summary": "Daily global surface temperature reached 2.24°C above the 1850–1900 average on 23 November, the highest daily value recorded and the sixth day in a row above 2°C. Preliminary data from the EU's Copernicus climate service point to a strong El Niño (a natural warming of the Pacific) on top of human-caused warming, and 2027 is expected to be the hottest year on record. The Paris Agreement limits refer to long-term averages, so a few days above 2°C do not mean the limit has been passed.",
+    "title": "World is more than 2°C warmer than pre-industrial times six days in a row",
+    "why": "A very hot 2027 is likely, so cities should prepare heat plans, cooling options and support for vulnerable people early."
+   },
+   {
+    "date": "26 Nov",
+    "full": null,
+    "id": "ep-methane-delay-vote",
+    "importance": "high",
+    "section": "energy",
+    "source": {
+     "name": "European Parliament press room",
+     "url": "https://www.europarl.europa.eu/news/en/press-room/20261123IPR49035/methane-deal-to-delay-reporting-and-monitoring-obligations-for-energy-importers"
+    },
+    "summary": "The European Parliament backed the deal with EU governments by 341 votes to 224, with 31 abstentions. Importers of oil, gas and coal now have until May 2030 to prove that their supply contracts only cover fuel monitored to standards like the EU's. EU governments must now formally approve the deal before it is published as law.",
+    "title": "Parliament approves two-year delay to methane rules for energy importers",
+    "why": "Methane is a strong greenhouse gas, and the delay slows EU pressure on leaks in imported gas that cities and utilities use for heating and power."
+   },
+   {
+    "date": "25 Nov",
+    "full": null,
+    "id": "zero-emission-construction-cities",
+    "importance": "notable",
+    "section": "cities",
+    "source": {
+     "name": "Eurocities",
+     "url": "https://eurocities.eu/latest/cities-and-national-authorities-drive-europes-zero-emission-construction-transition/"
+    },
+    "summary": "A Eurocities report on a Brussels conference shows how cities use their purchasing power to switch to electric construction machinery. Oslo has run more than 200 electric machinery projects, and Eindhoven reached about 60% zero-emission machinery hours in 2025. Construction machines emit around 3% of EU emissions and have no EU carbon limits, and slow grid connections remain a key barrier.",
+    "title": "Cities show how public buying can make construction sites emission-free",
+    "why": "Cities can cut emissions and noise on their own building sites by setting clear, gradual requirements in tenders and planning charging and grid access early."
+   }
+  ]
+ },
+ {
   "coverage": "Wed 25 – Thu 26 Nov",
   "date": "2026-11-26",
   "generatedAt": "2026-11-26T07:15:00+01:00",
